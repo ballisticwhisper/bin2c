@@ -14,12 +14,13 @@
 #include <stdlib.h>
 #include <assert.h>
 
+#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
+
 #ifdef USE_BZ2
 #include <bzlib.h>
 #endif
 
-int
-main ( int argc, char* argv[] )
+int main(int argc, char* argv[])
 {
     char *buf;
     char* ident;
